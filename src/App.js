@@ -1,11 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/header";
+import BlogState from "./context/blogState";
+import { Hero } from "./components/hero";
+import {BlogSection} from "./components/blogSection";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <BlogState>
+      <>
+        <Header />
+        <main className="py-8 sm:px-4 dark:text-white">
+          <Hero type="imgRight" />
+          <BlogSection type="Technology"/>
+        </main>
+      </>
+    </BlogState>
   );
 }
 
